@@ -4,7 +4,7 @@
 img, picture, svg, video {display: block;max-width: 100%;}
 input, textarea, button, select {font: inherit;}
 * {margin: 0;padding: 0;font: inherit;}
-body{min-height: 100vh;}
+body{height: 100vh;}
 
 .attribution { font-size: 11px; text-align: center; position: absolute; bottom: 1rem; right: 0; left: 0;}
 .attribution a { color: hsl(228, 45%, 44%); }
@@ -17,4 +17,96 @@ OWN CODE
   /* primary */
   --violet: hsl(257, 40%, 49%);
   --soft-magenta: hsl(300, 69%, 71%);
+}
+body {
+  background: url(images/bg-desktop.svg);
+  background-color: var(--violet);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+/* *logo */
+.logo {
+  height: 12.5rem;
+}
+#huddle-logo {
+  height: 3.375rem;
+  margin-left: 1.75rem;
+  margin-top: 3.25rem;
+}
+/* *content */
+.content {
+  margin-left: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 43%;
+}
+/* *illustrations */
+.illustrations {
+  margin-top: -.75rem;
+}
+/* *text */
+.text {
+  padding-left: .25rem;
+  padding-right: 2.75rem;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+}
+.text h1 {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+.text p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.5;
+}
+.text button {
+  width: 12.5rem;
+  height: 3.625rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 5rem;
+  color: var(--violet);
+}
+/* *icons */
+.icons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 6rem;
+}
+.circle-wrapper {
+  display: flex;
+  margin-right: 2.5rem;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+.circle {
+  aspect-ratio: 1 / 1;
+  width: 2.5rem;
+  border: 1px solid white;
+  border-radius: 50vh;
+  display: grid;
+  place-items: center;
+}
+#facebook-logo {
+  height: 1.5rem;
+}
+#twitter-logo {
+  height: 1.25rem;
+}
+#instagram-logo {
+  height: 1.75rem;
 }
