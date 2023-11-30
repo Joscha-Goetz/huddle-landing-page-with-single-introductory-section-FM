@@ -44,10 +44,12 @@ body {
   margin-left: 2rem;
   display: grid;
   grid-template-columns: 1fr 43%;
+  gap: 5rem;
 }
 /* *illustrations */
 .illustrations {
   margin-top: -.75rem;
+  align-self: center;
 }
 /* *text */
 .text {
@@ -79,6 +81,12 @@ body {
   border: none;
   border-radius: 5rem;
   color: var(--violet);
+  margin-top: 2rem;
+}
+.text button:hover,.text button:focus {
+  background: var(--soft-magenta);
+  color: white;
+  cursor: pointer;
 }
 /* *icons */
 .icons {
@@ -100,13 +108,80 @@ body {
   border-radius: 50vh;
   display: grid;
   place-items: center;
+  background: none;
 }
-#facebook-logo {
-  height: 1.5rem;
+.circle:hover, .circle:focus {
+  border: 1px solid var(--soft-magenta);
+  cursor: pointer;
 }
-#twitter-logo {
-  height: 1.25rem;
+.circle:hover svg, .circle:focus svg {
+  fill: var(--soft-magenta);
+}
+svg {
+  fill: white;
 }
 #instagram-logo {
-  height: 1.75rem;
+  margin-left: .0625rem;
+}
+
+@media (max-width: 1150px) {
+  .content {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: none;
+    margin-top: -18rem;
+  }
+  .illustrations {
+    max-height: 50rem;
+    margin: 0;
+  }
+  .text button {
+    width: 65%;
+    height: 5rem;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+  }
+  * {
+    text-align: center;
+  }
+  .icons {
+    justify-content: center;
+    margin-top: -20rem;
+    justify-content: center;
+  }
+  body {
+    background: url('images/bg-mobile.svg') top/contain no-repeat;
+    background-color: var(--violet);
+  }
+  .text p {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .text h1 {
+    font-size: 2.75rem;
+    margin-bottom: 2rem;
+  }
+  .text {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #huddle-logo {
+    height: 4.5rem;
+  }
+  .logo {
+    margin-bottom: -15rem;
+  }
+  .main {
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 3rem;
+  }
+  .circle-wrapper {
+    margin-left: 4rem;
+  }
+  #instagram-logo {
+    margin-right: none;
+  }
 }
